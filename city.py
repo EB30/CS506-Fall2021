@@ -37,6 +37,7 @@ def drawappleTree(height, trunk): #Assume width is 20
 
         middle = "" + space
         print(air + left + middle +right+ air)
+
     base = (20-(height-2)*2)
     side = (height-2)
     print(" "*side+("-"*base) + " "*side )
@@ -47,15 +48,19 @@ def drawappleTree(height, trunk): #Assume width is 20
 
 
 def drawmoreTrees(n):
-    size = np.random.randint(7,20)
+    """
+    incomplete
+    """
     for x in range(n):
-        apples = np.random.randint(0,3)
-        drawTree()
+        size = np.random.randint(7,20)
+        trunk = 6
+        drawappleTree(size, trunk)
     return 0
 
 
 def main():   
-    print(drawappleTree(6,5)) #Assume width of drawing is 20
+    drawappleTree(6,5) #Assume width of drawing is 20
+    #drawmoreTrees(1)
 
 if __name__ == "__main__": 
     main()
